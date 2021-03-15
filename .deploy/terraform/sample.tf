@@ -16,3 +16,9 @@ resource "aws_efs_file_system" "sharedstore" {
 #   name              = "test-log-group"
 #   # retention_in_days = 0
 # }
+
+resource "aws_ecr_repository" "foo" {
+  name                 = "bar"
+  image_tag_mutability = "MUTABLE"
+}
+
