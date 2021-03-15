@@ -12,7 +12,7 @@ resource "aws_efs_file_system" "sharedstore" {
   throughput_mode                 = var.efs["throughput_mode"]
 }
 
-resource "aws_cloudwatch_log_group" "log_group" {
-  name              = "test-log-group"
-  # retention_in_days = 0
-}
+# resource "aws_cloudwatch_log_group" "log_group" {
+#   name              = "test-log-group"
+#   # retention_in_days = 0
+# }
