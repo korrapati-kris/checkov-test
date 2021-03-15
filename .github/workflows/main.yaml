@@ -24,7 +24,7 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory : .deploy/terraform
-          skip_check: {{ variables.checks_to_skip }}
+          skip_check: "{{ variables.checks_to_skip }}"
           # soft_fail : false
           # quiet     : false
           framework : terraform 
