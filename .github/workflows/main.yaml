@@ -1,8 +1,8 @@
 name: Checkov Scan
 on: [push]
 
-Checkov_Checks_To-Skip:
-  CHECKOV_CHECKS_TO_SKIP: "CKV_AWS_42"
+# Checkov_Checks_To-Skip:
+#   CHECKOV_CHECKS_TO_SKIP: "CKV_AWS_42"
 
 jobs:
   build:
@@ -19,5 +19,5 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory : .deploy/terraform
-          skip_check: "{{ CHECKOV_CHECKS_TO_SKIP }}"
+          skip_check: CKV_AWS_42
           framework : terraform 
