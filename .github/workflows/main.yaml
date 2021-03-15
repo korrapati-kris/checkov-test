@@ -2,8 +2,8 @@ name: Checkov Scan
 on: [push]
 
 variables:
-- name: checks_to_skip
-  value: CKV_AWS_42 
+- name: "checks_to_skip"
+  value: "CKV_AWS_42"
 
 
 # Checkov_Checks_To-Skip:
