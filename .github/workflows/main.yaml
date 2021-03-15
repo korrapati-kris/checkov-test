@@ -16,5 +16,5 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory : .deploy/terraform
-          skip_check: CKV_AWS_42, CKV_AWS_66
+          skip_check: CKV_AWS_42,CKV_AWS_66
           framework : terraform 
