@@ -20,5 +20,5 @@ jobs:
         with:
           directory : .deploy/terraform
           skip_check: CKV_AWS_42
-          soft_fail : true
+          soft_fail : false
           framework : terraform 
