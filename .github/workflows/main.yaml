@@ -1,6 +1,11 @@
 name: Checkov Scan
 on: [push]
 
+variables:
+- name: checks_to_skip
+  value: CKV_AWS_42 
+
+
 # Checkov_Checks_To-Skip:
 #   CHECKOV_CHECKS_TO_SKIP: "CKV_AWS_42"
 
@@ -19,7 +24,7 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory : .deploy/terraform
-          skip_check: CKV_AWS_42
+          skip_check: {{ variables.checks_to_skip }}
           # soft_fail : false
-          quiet     : false
+          # quiet     : false
           framework : terraform 
